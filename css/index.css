@@ -1,0 +1,74 @@
+body {
+    text-align: center;
+    background-color: aliceblue;
+}
+h1 {
+    font-family: 'Amatic SC', cursive;
+}
+h2 {
+    font-family: 'Amatic SC', cursive;
+}
+hr {
+    width: 50%;
+    height: 200%;
+    color: darkred;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    color: slategray;
+}
+#name {
+    font-size: 400%;
+    margin-bottom: -20px;
+}
+#wrapper {
+    margin-top: 80px;
+}
+#image {
+    margin-top: 0;
+    padding-top: 40px;
+    margin-bottom: -20px;
+    transition: margin-top;
+}
+#titles {
+    font-family: 'Amatic SC', cursive;
+}
+#bio {
+    align-content: center;
+    padding: 5px 80px 80px 80px;
+}
+#homeHeadshot {
+    width:36px;
+    margin-left: 5px;
+}
+#indexHeadshot {
+    width: 20%;
+    transition: all 1000ms;
+}
+.banner div {
+    width: 33%;
+    float: left;
+}
+.banner div a {
+    float: left;
+}
+.spin {
+    width: 0 !important;
+    transition: all 1000ms;
+}
+.banner {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: -2px;
+    height: 45px;
+    margin: auto;
+}
+.fixed {
+    background-color: slategray;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.64);
+    transition: all 600ms;
+}
