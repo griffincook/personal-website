@@ -35,6 +35,7 @@ p {
     top: 22vh;
     min-width: 413px;
     width: 600px;
+    border-radius: 5px;
 }
 #titles h1 {
     text-shadow: 4px 2px #000000;
