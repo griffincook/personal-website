@@ -1,13 +1,14 @@
 body {
     text-align: center;
     background-color: aliceblue;
+    height: 100%;
+    margin: 0;
 }
-h1 {
-    font-family: 'Amatic SC', cursive;
+h1, h2 {
+    font-family: 'PT Sans Narrow', sans-serif;
+    letter-spacing: 2px;
 }
-h2 {
-    font-family: 'Amatic SC', cursive;
-}
+
 hr {
     width: 50%;
     height: 200%;
@@ -22,9 +23,6 @@ p {
     font-size: 400%;
     margin-bottom: -20px;
 }
-#wrapper {
-    margin-top: 80px;
-}
 #image {
     margin-top: 0;
     padding-top: 40px;
@@ -33,6 +31,19 @@ p {
 }
 #titles {
     font-family: 'Amatic SC', cursive;
+    color: #FFFFFF;
+    background: rgba(0,0,0,0.4);
+    padding-bottom: 1px;
+    margin-right: 20%;
+    margin-left: 20%;
+    border-top-right-radius: 85%;
+    border-top-left-radius: 85%;
+}
+#titles h1 {
+    text-shadow: 4px 2px #000000;
+}
+#titles h2 {
+    text-shadow: 2px 2px #000000;
 }
 #bio {
     align-content: center;
@@ -45,6 +56,11 @@ p {
 #indexHeadshot {
     width: 20%;
     transition: all 1000ms;
+}
+.homeContainer {
+    background: url("../images/tobermory.jpg") center no-repeat;
+    height: 103%;
+    background-size: cover;
 }
 .banner div {
     width: 33%;
@@ -59,16 +75,19 @@ p {
 }
 .banner {
     width: 100%;
+    background-color: rgba(78, 120, 99, 0);
     position: fixed;
     top: 0;
     left: -2px;
     height: 45px;
     margin: auto;
-}
-.fixed {
-    background-color: slategray;
     border-width: 1px 0 1px 0;
     border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    transition: all 600ms;
+}
+.fixed {
     border-color: rgba(0, 0, 0, 0.64);
+    background-color: rgb(14, 79, 120);
     transition: all 600ms;
 }

@@ -6,7 +6,7 @@ $(document).on('scroll',function(){
     }
 });
 
-$('#indexHeadshot').click(function(){
+$('#indexHeadshot').on('click', function(){
     console.log("clicked");
     $('#indexHeadshot').addClass('spin');
     setTimeout(function(){
