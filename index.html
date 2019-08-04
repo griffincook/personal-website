@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="index">
 <head>
     <meta charset="UTF-8">
     <title>Griffin Cook</title>
@@ -8,12 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat|Nunito|PT+Sans+Narrow|Poppins&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/like_button.js"></script>
 </head>
-<body>
+<body ng-controller="mainController" ng-init="navBarCtrl()" ng-cloak>
     <header class="banner">
         <div>
             <a href=".">Home</a>
@@ -22,12 +20,15 @@
             <a href=".">Resume</a>
         </div>
         <div>
-            <a href=".">Blog</a>
+            <a href="https://github.com/griffincook" target="_blank">Github</a>
+        </div>
+        <div>
+            <a href="https://www.linkedin.com/in/griffincook/" target="_blank">LinkedIn</a>
         </div>
     </header>
     <div class="homeContainer">
         <div id="image">
-            <img class="indexHeadshot" src="images/headshotCircleZoomedWhite.png">
+            <img ng-class="pictureClass" ng-src="{{pictureSrc}}" ng-click="spinPicture()">
         </div>
         <div id="titles">
             <h1 id="name">Griffin Cook</h1>
@@ -41,7 +42,7 @@
         Design Engineering.
         <br><br> &#8620 I have worked as an application software developer for the world's trusted currency authority <a href="https://www.xe.com/" >XE.com</a>.
         <br><br> &#8620 I worked as a front-end software developer at the quickly growing video analytics company, <a href="https://www.ssimwave.com/">SSIMWAVE</a>.
-        <br><br> &#8620 I love to play sports as well as cheer on the soon to be Stanley Cup Champions Toronto Maple Leafs (knock on wood).
+        <br><br> &#8620 I love to play sports! I have played on many intramural teams at UW including Hockey, Soccer, Volleyball, and Ultimate Frisbee.
         <br><br> &#8620 I love new experiences and being able to learn new, relevant, and applicable skills.
         <br><br> &#8620 I love outdoor activities and think that there is no where better to be than on the water.
         <br><br> &#8620 I am a self-taught guitar player and mostly play any songs I'm enjoying at the time.

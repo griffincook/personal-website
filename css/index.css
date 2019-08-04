@@ -44,20 +44,40 @@ p {
 }
 #bio {
     align-content: center;
-    padding: 5px 20% 80px 20%;
+    padding: 50px 20% 80px 20%;
 }
 .indexHeadshot {
     width: 33vh;
-    transition: all 1000ms;
+    height: 33vh;
+    transition: all 500ms;
     cursor: pointer;
+}
+.spin {
+    height: 33vh;
+    cursor: pointer;
+    width: 0;
+    transition: all 500ms;
 }
 .homeContainer {
     background: url("../images/tobermory.jpg") center no-repeat;
     height: 100vh;
     background-size: cover;
 }
+.banner {
+    width: 100%;
+    height: 6vh;
+    background-color: rgba(78, 120, 99, 0);
+    position: fixed;
+    top: 0;
+    margin: auto;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    transition: all 600ms;
+    z-index: 1;
+}
 .banner div {
-    width: 33%;
+    width: 25%;
     float: left;
     font-size: 4vh;
     font-family: 'PT Sans Narrow', sans-serif;
@@ -67,26 +87,16 @@ p {
     text-decoration: none;
     padding: 5px 0 5px 0;
 }
-.spin {
-    width: 0 !important;
-    transition: all 1000ms;
-}
-.banner {
-    width: 100%;
-    background-color: rgba(78, 120, 99, 0);
-    position: fixed;
-    top: 0;
-    left: -2px;
-    height: 6vh;
-    margin: auto;
-    border-width: 1px 0 1px 0;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0);
-    transition: all 600ms;
-    z-index: 1;
-}
 .fixed {
     border-color: rgba(0, 0, 0, 0.64);
     background-color: rgb(14, 79, 120);
     transition: all 600ms;
+    width: 100%;
+    height: 6vh;
+    position: fixed;
+    top: 0;
+    margin: auto;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    z-index: 1;
 }
