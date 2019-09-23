@@ -50,11 +50,11 @@ p {
     width: 33vh;
     height: 33vh;
     transition: all 500ms;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 .spin {
     height: 33vh;
-    cursor: pointer;
+    /*cursor: pointer;*/
     width: 0;
     transition: all 500ms;
 }
@@ -81,6 +81,7 @@ p {
     float: left;
     font-size: 4vh;
     font-family: 'PT Sans Narrow', sans-serif;
+    margin-top: 0.3vh;
 }
 .banner div a {
     color: #ffffff;
