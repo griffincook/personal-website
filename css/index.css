@@ -12,6 +12,7 @@ hr {
 }
 p {
     display: inline-block;
+    text-align: left;
     color: slategray;
 }
 #name {
@@ -48,6 +49,12 @@ p {
 }
 #bio h1 {
     text-decoration: underline;
+}
+#bio h3 {
+    text-align: left;
+}
+.projectImage {
+    width: 25%;
 }
 .indexHeadshot {
     width: 33vh;
