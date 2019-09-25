@@ -2,7 +2,7 @@
     angular.module('index', [])
         .controller('mainController', function($scope, $timeout) {
             $scope.pictureClass = "indexHeadshot";
-            $scope.pictureSrc = "images/headshot.png";
+            $scope.pictureSrc = "images/headshot_scaled_down.png";
             let flipped = 0;
 
             $scope.spinPicture = function() {

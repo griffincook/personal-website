@@ -69,7 +69,7 @@ p {
     transition: all 500ms;
 }
 .homeContainer {
-    background: url("../images/tobermory.jpg") center no-repeat;
+    background: url("../images/tobermory_scaled_down.jpg") center no-repeat;
     height: 100vh;
     background-size: cover;
 }
