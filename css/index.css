@@ -6,7 +6,7 @@ body {
 }
 
 hr {
-    width: 50%;
+    width: 100%;
     height: 200%;
     color: darkred;
 }
@@ -48,13 +48,17 @@ p {
     font-family: 'Montserrat', sans-serif;
 }
 #bio h1 {
-    text-decoration: underline;
+    background-color: #ff7b00;
+    font-family: 'Julius Sans One', sans-serif;
 }
 #bio h3 {
     text-align: left;
 }
-.projectImage {
+.vertImage {
     width: 25%;
+}
+.horizImage {
+    width: 75%;
 }
 .indexHeadshot {
     width: 33vh;
@@ -75,7 +79,7 @@ p {
 }
 .banner {
     width: 100%;
-    height: 6vh;
+    height: 36px;
     background-color: rgba(78, 120, 99, 0);
     position: fixed;
     top: 0;
@@ -89,9 +93,10 @@ p {
 .banner div {
     width: 33%;
     float: left;
-    font-size: 4vh;
+    font-size: 24px;
     font-family: 'PT Sans Narrow', sans-serif;
-    margin-top: 0.3vh;
+    margin-top: 1px;
+    color: #ffffff;
 }
 .banner div a {
     color: #ffffff;
@@ -103,7 +108,7 @@ p {
     background-color: rgb(14, 79, 120);
     transition: all 600ms;
     width: 100%;
-    height: 6vh;
+    height: 36px;
     position: fixed;
     top: 0;
     margin: auto;

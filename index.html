@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat|Nunito|PT+Sans+Narrow|Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat|Nunito|PT+Sans+Narrow|Poppins|Julius+Sans+One&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="js/app.js"></script>
@@ -14,12 +14,18 @@
 <body ng-controller="mainController" ng-init="navBarCtrl()" ng-cloak>
     <header class="banner">
         <div>
+            <a href="#aboutMe">About Me</a>
+            |
             <a href="./pdf/technical_resume.pdf" target="_blank">Resume</a>
         </div>
         <div>
+            <a href="#projects">Projects</a>
+            |
             <a href="https://github.com/griffincook" target="_blank">Github</a>
         </div>
         <div>
+            <a href="#workExperience">Work Experience</a>
+            |
             <a href="https://www.linkedin.com/in/griffincook/" target="_blank">LinkedIn</a>
         </div>
     </header>
@@ -33,80 +39,127 @@
         </div>
     </div>
     <div id="bio">
-        <h1>Who Am I?</h1>
+        <div id="aboutMe"><br></div>
+        <h1>About Me</h1>
 
         <p>
             &#8620 I am a student at the University of Waterloo currently working towards my bachelor of Engineering in Systems
             Design Engineering.
-            <br><br> &#8620 I love to play sports! I have played on many intramural teams at UW including Hockey, Soccer, Volleyball, and Ultimate Frisbee.
+            <br><br> &#8620 I love to play sports! I have played on many intramural teams at UW including Hockey, Soccer,
+            Indoor Volleyball, Beach Volleyball, Flag Football and Ultimate Frisbee.
             <br><br> &#8620 I love new experiences and being able to learn new, relevant, and applicable skills.
             <br><br> &#8620 I love outdoor activities and think that there is no where better to be than on the water.
-            <br><br> &#8620 I am a self-taught guitar player and mostly play any songs I'm enjoying at the time.
-            <br><br> &#8620 I love listening to music and am always trying to explore new genres.
+            <br><br> &#8620 I am a self-taught guitar player and mostly play any songs that I'm enjoying at the time.
+            <br><br> &#8620 I love listening to music and am always trying to explore new genres, but my go to genres are
+            rock, folk, and indie.
         </p>
 
-        <hr>
-
+        <div id="projects"><br></div>
         <h1>Projects</h1>
         <h3>Shottle</h3>
         <p>
             &#8620 A bottle that is meant to reduce alcohol consumption and increase water intake when drinking at social events.
             <br><br> &#8620 The bottle has two compartments, one for alcohol and one for water.
-            <br><br> &#8620 The lid has to be held on the alcohol compartment or else it will spin back to the water compartment.
+            <br><br> &#8620 The lid has to be held on the alcohol compartment or else a spring will force the opening to spin back
+            to the water compartment.
             <br><br> &#8620 Our design team started off with defining our problem space, creating personas, and brainstorming ideas.
-            <br><br> &#8620 Once we had our bottle idea, we followed through an iterative design process by first creating a low-fidelity prototype then conducted user testing.
+            <br><br> &#8620 Once we had our bottle idea, we followed an iterative design process by first creating a low-fidelity prototype then conducted user testing.
             <br><br> &#8620 Adjustments were made and this process was replicated for a medium-fidelity prototype.
             <br><br> &#8620 The high fidelity prototype was then designed in Solidworks by myself and another team member, and printed using a 3D printer.
             <br><br> &#8620 Final user testing was finally conducted.
         </p>
-        <br><br><img src="images/shottle1.jpg" class="projectImage">
-        <img src="images/shottle2.jpg" class="projectImage">
-        <img src="images/shottle3.jpg" class="projectImage">
+        <br>
+        <h5>Components of the High Fidelity Prototype Including the Bottle and a Two-Piece Lid</h5>
+        <img src="images/shottle1.jpg" class="vertImage">
+        <img src="images/shottle2.jpg" class="vertImage">
+        <img src="images/shottle3.jpg" class="vertImage">
+        <br>
+        <hr>
+
         <h3>Guitar Hero</h3>
         <p>
             &#8620 Recreation of Guitar Hero using two breadboards and an Arduino Uno.
             <br><br> &#8620 One breadboard/circuit has 4 sets of 4 different coloured LEDs. A signal is sent from
             the Arduino to the first set of LEDs, causing them to light up. That signal is then stored in a register.
-            When the next signal comes in from the Arduino, the second set of lights would light up with the first signal pattern
-            and the first set of lights would light up with the new signal pattern. This progression of signals would continue
-            until the light signal lights up each set of LEDs. The bottom set of LEDs is the set of lights that the player
+            When the next signal comes in from the Arduino, the second set of LEDs illuminate with the first signal pattern
+            and the first set of LEDs illuminates with the new signal pattern. This progression of signals continues
+            until the game ends. The bottom set of LEDs is the set of lights that the player
             has to match.
             <br><br> &#8620 The other circuit has 4 buttons, each matching a correspondingly coloured LED. The player has
             to press the correct combination of buttons to match the fourth set of LEDs, or the ones closest to the player.
             <br><br> &#8620 The button combination is input into the Arduino, where an interrupt checks whether it corresponds
             to the signal. The combination of notes is audibly played if the input is correct, and an ugly noise is played
             if the input is incorrect.
+            <br><br> &#8620 The streak of correct notes in a row is displayed in a console window, and the high score is
+            kept track of and updated.
         </p>
+        <h5>Circuit that Displays Which Notes Need to be Played</h5>
+        <img src="images/guitar-hero-notes.jpg" class="vertImage">
+        <hr>
+
         <h3>Blogh</h3>
         <p>
             &#8620 A PHP blog platform with a MySQL database.
+            <br><br> &#8620 Users can create an account and are given basic access. There are also Author accounts and Admin
+            accounts, which have access to more pages.
         </p>
+        <br><br>
+        <h5>Home Page</h5>
+        <img src="images/home_capture.PNG" class="horizImage">
+        <br>
+        <h5>Home Page Scrolled Down, Showing List of Blogs</h5>
+        <img src="images/blogs_capture.PNG" class="horizImage">
+        <br>
+        <h5>Author's Page</h5>
+        <img src="images/author_capture.PNG" class="horizImage">
+        <br>
+        <h5>Profile Editing Page</h5>
+        <img src="images/profile_capture.PNG" class="horizImage">
+        <br>
+        <h5>Admin's Page For Editing Articles</h5>
+        <img src="images/admin_capture.PNG" class="horizImage">
         <h3>You Can’t Hide</h3>
         <p>
-            &#8620 A 3D Unity horror game inspired by Slenderman.
+            &#8620 A 3D Unity Horror Game inspired by Slenderman.
+            <br><br> &#8620 I created the game flow, designed the atmosphere, wrote the story, and developed scripts in C#.
+            <br><br> &#8620 The player must run around in the woods collecting red cubes and fighting off evil mushrooms.
+            <br><br> &#8620 Every once and a while a larger monster will find the player and they must run for their life.
+            <br><br> &#8620 Collect all 10 cubes and take them to the one friendly mushroom at the mountain to move on to the boss battle.
+            <br><br> &#8620 In the boss battle, the player must collect shots by attacking the mushrooms and shoot them at the monster, which is now the size of a skyscraper.
         </p>
-        <h3>Hibernation</h3>
-        <p>
-            &#8620 Text-based adventure game written in PHP with a MySQL database.
-        </p>
-
+        <h5>Opening Scene with Instructions for the Player</h5>
+        <img src="images/you_cant_hide.PNG" class="horizImage">
         <hr>
 
-        <h1>Work Experience</h1>
-        <h3>Backend Software Developer, XE.com Inc. [May - August, 2019] </h3>
+        <h3>Hibernation</h3>
         <p>
-            &#8620 Collaborated with a small team dedicated to developing chatbots on Google Dialogflow and Amazon Alexa in Node.js.
-            <br><br> &#8620 Actively sought out work and often created new tasks based on what needed to be done.
+            &#8620 A text-based adventure game created with PHP, HTML, CSS, and a MySQL database.
+            <br><br>&#8620 I wrote the narrative, created a story board, designed the game flow, and wrote the code.
+            <br><br>&#8620 Inspired by the classic adventure game Zork.
+            <br><br>&#8620 The player wakes up in their bedroom on a moon base feeling disoriented. They must figure out
+            what is going on by exploring the base, collecting items, and interacting with objects,
+            all while staying safe.
+        </p>
+        <img src="images/first_room_screenshot.PNG" class="horizImage">
+
+        <div id="workExperience"><br></div>
+        <h1>Work Experience</h1>
+        <h3>Backend Software Developer, <a href="https://xe.com" target="_blank">XE.com Inc.</a> [May - August, 2019] </h3>
+        <p>
+            &#8620 Worked on a small team of two dedicated to developing chatbots on Google Dialogflow and Amazon Alexa in Node.js.
+            <br><br> &#8620 Actively sought out work and often created new tickets based on what needed to be done.
             <br><br> &#8620 Pitched new feature ideas and created prototypes, some of which became fully functioning features.
             <br><br> &#8620 Learned and executed DevOps practices using Gitlab CI/CD, and Terraform to manage AWS.
         </p>
-        <h3>Frontend Full Stack Developer, SSIMWAVE [Sept - December, 2018] </h3>
+        <hr>
+        <h3>Frontend Full Stack Developer, <a href="https://ssimwave.com" target="_blank">SSIMWAVE</a> [Sept - December, 2018] </h3>
         <p>
             &#8620 Implemented new features and designs for a web application using AngularJS, HTML and CSS.
             <br><br> &#8620 Worked directly with a designer and other developers to optimize the user experience of the UI.
             <br><br> &#8620 Created suggestions and recommendations for bettering the application, and followed through with developing them.
         </p>
-        <h3> Systems Software Developer, XE.com Inc. [January - April, 2018] </h3>
+        <hr>
+        <h3> Systems Software Developer, <a href="https://xe.com" target="_blank">XE.com Inc.</a> [January - April, 2018] </h3>
         <p>
             &#8620 Developed projects from scratch, and worked on pre-existing projects, both on the backend and frontend, all in an agile work environment.
             <br><br> &#8620 Worked solely with new languages, libraries, and frameworks learned on the job, while managing to meet deadlines with constantly changing projects from sprint to sprint.

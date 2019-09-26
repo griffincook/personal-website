@@ -49,7 +49,7 @@
             };
 
             function manageScrollBar() {
-                let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) /4;
+                let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) /6;
                 if ($(document).scrollTop() >= h) {
                     $('.banner').addClass('fixed');
                 } else {
