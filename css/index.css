@@ -42,15 +42,23 @@ li {
 }
 #bio {
     align-content: center;
-    padding: 50px 20% 80px 20%;
+    padding: 50px 20% 200px 20%;
     font-family: 'Montserrat', sans-serif;
-}
-#bio h1 {
-    background-color: #ff7b00;
-    font-family: 'Julius Sans One', sans-serif;
 }
 #bio h3 {
     text-align: left;
+}
+.sectionHeader {
+    background-color: #11669b;
+    font-family: 'Julius Sans One', sans-serif;
+    cursor: pointer;
+    color: #FFFFFF;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .infoBlock {
     display: inline-block;

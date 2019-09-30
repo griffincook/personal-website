@@ -5,6 +5,9 @@
             let flipped = 0;
 
             function init() {
+                $scope.displayAboutMe = false;
+                $scope.displayProjects = false;
+                $scope.displayWork = false;
                 $scope.pictureClass = "indexHeadshot";
                 $scope.pictureSrc = "images/headshot_scaled_down.png";
                 $scope.headshotTransparency = "transparent";
@@ -46,6 +49,18 @@
                     $scope.workTransparency = "opaque";
                 }, 3400);
             }
+
+            $scope.toggleAboutMe = function() {
+                $scope.displayAboutMe = !$scope.displayAboutMe;
+            };
+
+            $scope.toggleProjects = function() {
+                $scope.displayProjects = !$scope.displayProjects;
+            };
+
+            $scope.toggleWork = function() {
+                $scope.displayWork = !$scope.displayWork;
+            };
 
             $scope.spinPicture = function() {
                 flipped++;
