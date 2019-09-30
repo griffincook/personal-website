@@ -5,6 +5,7 @@
             let flipped = 0;
 
             function init() {
+                $scope.scrollLock = "noScroll";
                 $scope.displayAboutMe = false;
                 $scope.displayProjects = false;
                 $scope.displayWork = false;
@@ -47,6 +48,7 @@
                 }, 2900);
                 $timeout(function(){
                     $scope.workTransparency = "opaque";
+                    $scope.scrollLock = "";
                 }, 3400);
             }
 

@@ -134,3 +134,6 @@ li {
     opacity: 100%;
     transition: all 500ms;
 }
+.noScroll {
+    overflow: hidden;
+}
