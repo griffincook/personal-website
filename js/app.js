@@ -5,6 +5,10 @@
             let flipped = 0;
 
             function init() {
+                $(window).on('beforeunload', function() {
+                    $('body').hide();
+                    $(window).scrollTop(0);
+                });
                 $scope.scrollLock = "noScroll";
                 $scope.displayAboutMe = false;
                 $scope.displayProjects = false;

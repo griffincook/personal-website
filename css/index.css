@@ -50,9 +50,9 @@ li {
 }
 .sectionHeader {
     background-color: #11669b;
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
     cursor: pointer;
-    color: #FFFFFF;
+    color: aliceblue;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -63,7 +63,7 @@ li {
 .infoBlock {
     display: inline-block;
     text-align: left;
-    color: slategray;
+    color: #414957;
 }
 .vertImage {
     width: 25%;
