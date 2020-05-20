@@ -40,6 +40,9 @@ li {
 #titles h2 {
   text-shadow: 2px 2px #000000;
 }
+h5 {
+  font-size: 0.8rem;
+}
 #bio {
   min-height: 100vh;
   align-content: center;
@@ -57,6 +60,8 @@ li {
   padding-top: 12px;
   margin-right: 0;
   margin-left: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -66,11 +71,12 @@ li {
 }
 .infoBlock {
   display: inline-block;
-  text-align: left;
+  text-align: left !important;
   color: #414957;
 }
 .vertImage {
-  width: 25%;
+  width: 100%;
+  padding-bottom: 20px;
 }
 .horizImage {
   width: 75%;
@@ -98,7 +104,7 @@ li {
   width: 100%;
   height: 36px;
   background-color: rgba(78, 120, 99, 0);
-  position: fixed;
+  position: absolute;
   top: 0;
   margin: auto;
   border-width: 1px 0 1px 0;
@@ -125,7 +131,6 @@ li {
   background-color: rgb(14, 79, 120);
   transition: all 600ms;
   width: 100%;
-  height: 36px;
   position: fixed;
   top: 0;
   margin: auto;
@@ -145,4 +150,7 @@ li {
 }
 .icon {
   width: 60px;
+}
+.highlightText {
+  color: #ffbe00 !important;
 }

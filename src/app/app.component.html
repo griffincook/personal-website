@@ -1,16 +1,16 @@
 <div id="appContainer" [ngClass]="scrollLock">
-  <header class="banner">
-    <div [ngClass]="aboutTransparency">
-      <a href="../assets/pdf/griffin_cook_resume.pdf" target="_blank">Resume</a>
-    </div>
-    <div [ngClass]="projectTransparency">
-      <a href="https://github.com/griffincook" target="_blank">Github</a>
-    </div>
-    <div [ngClass]="workTransparency">
-      <a href="https://www.linkedin.com/in/griffincook/" target="_blank">LinkedIn</a>
-    </div>
-  </header>
   <div class="background">
+    <div class="banner">
+      <div [ngClass]="aboutTransparency">
+        <a href="../assets/pdf/griffin_cook_resume.pdf" target="_blank">Resume</a>
+      </div>
+      <div [ngClass]="projectTransparency">
+        <a href="https://github.com/griffincook" target="_blank">Github</a>
+      </div>
+      <div [ngClass]="workTransparency">
+        <a href="https://www.linkedin.com/in/griffincook/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
     <div class="d-flex justify-content-center">
       <div id="image">
         <img [ngClass]="[pictureClass, headshotTransparency]" [src]="pictureSrc">
@@ -24,121 +24,20 @@
     </div>
   </div>
   <div class="sectionHeader row">
-    <div class="col-4">
-      <h1 (click)="selectTab(0)">ABOUT ME</h1>
+    <div class="col-4" [ngClass]="{'highlightText': selectedTab == 0}">
+      <h2 (click)="selectTab(0)">ABOUT ME</h2>
     </div>
-    <div class="col-4">
-      <h1 (click)="selectTab(1)">PROJECTS</h1>
+    <div class="col-4" [ngClass]="{'highlightText': selectedTab == 1}">
+      <h2 (click)="selectTab(1)">PROJECTS</h2>
     </div>
-    <div class="col-4">
-      <h1 (click)="selectTab(2)">WORK EXPERIENCE</h1>
+    <div class="col-4" [ngClass]="{'highlightText': selectedTab == 2}">
+      <h2 (click)="selectTab(2)">WORK</h2>
     </div>
   </div>
   <div id="bio">
-
-
     <app-info-section *ngIf="selectedTab == 0" title="ABOUT ME" [infoObjs]="aboutInfo"></app-info-section>
     <app-info-section *ngIf="selectedTab == 1" title="PROJECTS" [infoObjs]="projectsInfo"></app-info-section>
-    <div id="projects">
-      <br>
-      <h1 class="sectionHeader" (click)="toggleProjects()">PROJECTS</h1>
-      <div [style]="{'display': displayProjects ? 'inline-block' : 'none'}">
-        <h3>Shottle</h3>
-
-        <br>
-        <h5>Components of the High Fidelity Prototype Including the Bottle and a Two-Piece Lid</h5>
-        <img src="../assets/images/shottle1.jpg" class="vertImage">
-        <img src="../assets/images/shottle2.jpg" class="vertImage">
-        <img src="../assets/images/shottle3.jpg" class="vertImage">
-        <br>
-
-        <hr>
-
-        <h3>Guitar Hero</h3>
-
-        <h5>Circuit that Displays Which Notes Need to be Played</h5>
-        <img src="../assets/images/guitar_hero_notes.jpg" class="vertImage">
-
-        <hr>
-
-        <h3>Blogh</h3>
-
-        <br><br>
-        <h5>Home Page</h5>
-        <img src="../assets/images/home_capture.PNG" class="horizImage">
-        <br>
-        <h5>Author's Page</h5>
-        <img src="../assets/images/author_capture.PNG" class="horizImage">
-        <br>
-        <h5>Admin's Page For Editing Articles</h5>
-        <img src="../assets/images/admin_capture.PNG" class="horizImage">
-
-        <hr>
-
-        <h3>You Can’t Hide</h3>
-
-        <h5>Opening Scene with Instructions for the Player</h5>
-        <img src="../assets/images/you_cant_hide.PNG" class="horizImage">
-
-        <hr>
-
-        <h3>Hibernation</h3>
-
-        <img src="../assets/images/first_room_screenshot.PNG" class="horizImage">
-      </div>
-    </div>
-    <div id="workExperience">
-      <br>
-      <h1 class="sectionHeader" (click)="toggleWork()">WORK EXPERIENCE</h1>
-      <div [style]="{'display': displayWork ? 'inline-block' : 'none'}">
-        <h3>Backend Software Developer, <a href="https://xe.com" target="_blank">XE.com Inc.</a> [May - August, 2019] </h3>
-        <div class="infoBlock">
-          <ul>
-            <li>
-
-            </li>
-            <li>
-              Actively sought out work and often created new tickets based on what needed to be done.
-            </li>
-            <li>
-              Pitched new feature ideas and created prototypes, some of which became fully functioning features.
-            </li>
-            <li>
-              Learned and executed DevOps practices using Gitlab CI/CD, and Terraform to manage AWS.
-            </li>
-          </ul>
-        </div>
-
-        <hr>
-
-        <h3>Frontend Full Stack Developer, <a href="https://ssimwave.com" target="_blank">SSIMWAVE</a> [Sept - December, 2018] </h3>
-        <div class="infoBlock">
-          <ul>
-            <li>
-              Implemented new features and designs for a web application using AngularJS, HTML and CSS.
-            </li>
-            <li>
-              Worked directly with a designer and other developers to optimize the user experience of the UI.
-            </li>
-            <li>
-              Created suggestions and recommendations for bettering the application, and followed through with developing them.
-            </li>
-          </ul>
-        </div>
-        <hr>
-        <h3> Systems Software Developer, <a href="https://xe.com" target="_blank">XE.com Inc.</a> [January - April, 2018] </h3>
-        <div class="infoBlock">
-          <ul>
-            <li>
-              Developed projects from scratch, and worked on pre-existing projects, both on the backend and frontend, all in an agile work environment.
-            </li>
-            <li>
-              Worked solely with new languages, libraries, and frameworks learned on the job, while managing to meet deadlines with constantly changing projects from sprint to sprint.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <app-info-section *ngIf="selectedTab == 2" title="WORK EXPERIENCE" [infoObjs]="workInfo"></app-info-section>
   </div>
 </div>
 

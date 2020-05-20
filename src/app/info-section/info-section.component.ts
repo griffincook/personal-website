@@ -16,5 +16,8 @@ export class InfoSectionComponent implements OnInit {
 export class infoObj {
   title: string;
   bullets: string[];
-  images?: string[];
+  imageData?: {
+    caption: string;
+    images: string[];
+  };
 }
