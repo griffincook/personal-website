@@ -2,7 +2,6 @@
 
 body {
   text-align: center;
-  background-color: aliceblue;
   height: 100%;
   margin: 0;
 }
@@ -54,9 +53,8 @@ h5 {
 }
 .sectionHeader {
   background-color: #11669b;
-  font-family: 'PT Sans Narrow', sans-serif;
   cursor: pointer;
-  color: aliceblue;
+  color: #FFFFFF;
   padding-top: 12px;
   margin-right: 0;
   margin-left: 0;
@@ -68,6 +66,9 @@ h5 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.highlightText {
+  text-decoration: underline;
 }
 .infoBlock {
   display: inline-block;
@@ -128,6 +129,7 @@ h5 {
   border-width: 1px 0 1px 0;
   border-style: solid;
   z-index: 1;
+  transition: all 800ms;
 }
 .transparent {
   opacity: 0;
@@ -141,9 +143,6 @@ h5 {
 }
 .icon {
   width: 60px;
-}
-.highlightText {
-  color: #ffbe00 !important;
 }
 .horizImage {
   width: 100% !important;

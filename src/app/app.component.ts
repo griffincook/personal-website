@@ -64,7 +64,7 @@ export class AppComponent implements OnInit {
   };
 
   manageScrollBar() {
-    let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) * 1.05;
+    let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) * 1.15;
     if ($(document).scrollTop() >= h) {
       $('.sectionHeader').addClass('fixed');
     } else {
@@ -185,6 +185,7 @@ export class AppComponent implements OnInit {
           caption: 'Various pages throughout the platform',
           images: [
             'assets/images/home_capture.PNG',
+            'assets/images/author_capture.PNG',
             'assets/images/admin_capture.PNG',
           ],
           selected: 0,
