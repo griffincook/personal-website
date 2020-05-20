@@ -129,7 +129,6 @@ h5 {
   border-width: 1px 0 1px 0;
   border-style: solid;
   z-index: 1;
-  transition: all 800ms;
 }
 .transparent {
   opacity: 0;
