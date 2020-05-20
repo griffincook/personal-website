@@ -1,96 +1,50 @@
-<div id="body" [ngClass]="scrollLock">
-  <header class="banner" [ngClass]="bannerClass">
+<div id="appContainer" [ngClass]="scrollLock">
+  <header class="banner">
     <div [ngClass]="aboutTransparency">
-      <a href="#aboutMe" (click)="displayAboutMe = true">About Me!</a>
-      |
       <a href="../assets/pdf/griffin_cook_resume.pdf" target="_blank">Resume</a>
     </div>
     <div [ngClass]="projectTransparency">
-      <a href="#projects" (click)="displayProjects = true">Projects</a>
-      |
       <a href="https://github.com/griffincook" target="_blank">Github</a>
     </div>
     <div [ngClass]="workTransparency">
-      <a href="#workExperience" (click)="displayWork = true">Work Experience</a>
-      |
       <a href="https://www.linkedin.com/in/griffincook/" target="_blank">LinkedIn</a>
     </div>
   </header>
-  <div class="homeContainer">
-    <div id="image">
-      <img [ngClass]="[pictureClass, headshotTransparency]" [src]="pictureSrc">
+  <div class="background">
+    <div class="d-flex justify-content-center">
+      <div id="image">
+        <img [ngClass]="[pictureClass, headshotTransparency]" [src]="pictureSrc">
+      </div>
     </div>
-    <div id="titles" [ngClass]="titlesTransparency">
-      <h1 id="name">Griffin Cook</h1>
-      <h2>University of Waterloo - Systems Design Engineering</h2>
+    <div class="d-flex justify-content-center">
+      <div id="titles" [ngClass]="titlesTransparency">
+        <h1 id="name">Griffin Cook</h1>
+        <h2>Systems Design Engineering @ University of Waterloo</h2>
+      </div>
+    </div>
+  </div>
+  <div class="sectionHeader row">
+    <div class="col-4">
+      <h1 (click)="selectTab(0)">ABOUT ME</h1>
+    </div>
+    <div class="col-4">
+      <h1 (click)="selectTab(1)">PROJECTS</h1>
+    </div>
+    <div class="col-4">
+      <h1 (click)="selectTab(2)">WORK EXPERIENCE</h1>
     </div>
   </div>
   <div id="bio">
-    <div id="aboutMe">
-      <br>
-      <h1 class="sectionHeader" (click)="toggleAboutMe()">ABOUT ME</h1>
-      <div class="infoBlock" [style]="{'display': displayAboutMe ? 'inline-block' : 'none'}">
-        <ul>
-          <li> A student at the University of Waterloo currently working towards my bachelor of Engineering in Systems
-            Design Engineering.
-          </li>
-          <li>
-            Always looking for new experiences where I am able to learn new, relevant, and applicable skills.
-          </li>
-          <li>
-            Passionate about creativity, design, and building things.
-          </li>
-          <li>
-            Athletic and especially enjoy playing sports! I have played on many intramural teams at UW including Hockey, Soccer,
-            Indoor Volleyball, Beach Volleyball, Flag Football and Ultimate Frisbee.
-          </li>
-          <li>
-            Love outdoor activities and think that there is nowhere better to be than on the water.
-          </li>
-          <li>
-            A self-taught guitar player and mostly play any songs that I'm enjoying at the time.
-          </li>
-          <li>
-            Obsessed with listening to music and always trying to explore new genres, but my go to genres are
-            rock, folk, and indie.
-          </li>
-        </ul>
-      </div>
-    </div>
+
+
+    <app-info-section *ngIf="selectedTab == 0" title="ABOUT ME" [infoObjs]="aboutInfo"></app-info-section>
+    <app-info-section *ngIf="selectedTab == 1" title="PROJECTS" [infoObjs]="projectsInfo"></app-info-section>
     <div id="projects">
       <br>
       <h1 class="sectionHeader" (click)="toggleProjects()">PROJECTS</h1>
       <div [style]="{'display': displayProjects ? 'inline-block' : 'none'}">
         <h3>Shottle</h3>
-        <div class="infoBlock">
-          <ul>
-            <li>
-              A bottle that is meant to reduce alcohol consumption and increase water intake when drinking at social events.
-            </li>
-            <li>
-              The bottle has two compartments, one for alcohol and one for water.
-            </li>
-            <li>
-              The lid has to be held on the alcohol compartment or else a spring will force the opening to spin back
-              to the water compartment.
-            </li>
-            <li>
-              Our design team started off with defining our problem space, creating personas, and brainstorming ideas.
-            </li>
-            <li>
-              Once we had our bottle idea, we followed an iterative design process by first creating a low-fidelity prototype then conducted user testing.
-            </li>
-            <li>
-              Adjustments were made and this process was replicated for a medium-fidelity prototype.
-            </li>
-            <li>
-              The high fidelity prototype was then designed in Solidworks by myself and another team member, and printed using a 3D printer.
-            </li>
-            <li>
-              Final user testing was finally conducted.
-            </li>
-          </ul>
-        </div>
+
         <br>
         <h5>Components of the High Fidelity Prototype Including the Bottle and a Two-Piece Lid</h5>
         <img src="../assets/images/shottle1.jpg" class="vertImage">
@@ -101,56 +55,14 @@
         <hr>
 
         <h3>Guitar Hero</h3>
-        <div class="infoBlock">
-          <ul>
-            <li>
-              Recreation of Guitar Hero using two breadboards and an Arduino Uno.
-            </li>
-            <li>
-              One breadboard/circuit has 4 sets of 4 different coloured LEDs.
-            </li>
-            <li>
-              A signal is sent from the Arduino to the first set of LEDs, causing them to light up. That signal is then stored in a register.
-            </li>
-            <li>
-              When the next signal comes in from the Arduino, the second set of LEDs illuminate with the first signal pattern
-              and the first set of LEDs illuminates with the new signal pattern. This progression of signals continues until the game ends.
-            </li>
-            <li>
-              The bottom set of LEDs is the set of lights that the player has to match.
-            </li>
-            <li>
-              The other circuit has 4 buttons, each matching a correspondingly coloured LED. The player has
-              to press the correct combination of buttons to match the fourth set of LEDs, or the ones closest to the player.
-            </li>
-            <li>
-              The button combination is input into the Arduino, where an interrupt checks whether it corresponds
-              to the signal. The combination of notes is audibly played if the input is correct, and an ugly noise is played
-              if the input is incorrect.
-            </li>
-            <li>
-              The streak of correct notes in a row is displayed in a console window, and the high score is
-              kept track of and updated.
-            </li>
-          </ul>
-        </div>
+
         <h5>Circuit that Displays Which Notes Need to be Played</h5>
-        <img src="../assets/images/guitar-hero-notes.jpg" class="vertImage">
+        <img src="../assets/images/guitar_hero_notes.jpg" class="vertImage">
 
         <hr>
 
         <h3>Blogh</h3>
-        <div class="infoBlock">
-          <ul>
-            <li>
-              A PHP blog platform with a MySQL database.
-            </li>
-            <li>
-              Users can create an account and are given basic access. There are also Author accounts and Admin
-              accounts, which have access to more pages.
-            </li>
-          </ul>
-        </div>
+
         <br><br>
         <h5>Home Page</h5>
         <img src="../assets/images/home_capture.PNG" class="horizImage">
@@ -164,52 +76,14 @@
         <hr>
 
         <h3>You Can’t Hide</h3>
-        <div class="infoBlock">
-          <ul>
-            <li>
-              A 3D Unity Horror Game inspired by Slenderman.
-            </li>
-            <li>
-              I created the game flow, designed the atmosphere, wrote the story, and developed scripts in C#.
-            </li>
-            <li>
-              The player must run around in the woods collecting red cubes and fighting off evil mushrooms.
-            </li>
-            <li>
-              Every once and a while a larger monster will find the player and they must run for their life.
-            </li>
-            <li>
-              Collect all 10 cubes and take them to the one friendly mushroom at the mountain to move on to the boss battle.
-            </li>
-            <li>
-              In the boss battle, the player must collect shots by attacking the mushrooms and shoot them at the monster, which is now the size of a skyscraper.
-            </li>
-          </ul>
-        </div>
+
         <h5>Opening Scene with Instructions for the Player</h5>
         <img src="../assets/images/you_cant_hide.PNG" class="horizImage">
 
         <hr>
 
         <h3>Hibernation</h3>
-        <div class="infoBlock">
-          <ul>
-            <li>
-              A text-based adventure game created with PHP, HTML, CSS, and a MySQL database.
-            </li>
-            <li>
-              I wrote the narrative, created a story board, designed the game flow, and wrote the code.
-            </li>
-            <li>
-              Inspired by the classic adventure game Zork.
-            </li>
-            <li>
-              The player wakes up in their bedroom on a moon base feeling disoriented. They must figure out
-              what is going on by exploring the base, collecting items, and interacting with objects,
-              all while staying safe.
-            </li>
-          </ul>
-        </div>
+
         <img src="../assets/images/first_room_screenshot.PNG" class="horizImage">
       </div>
     </div>
@@ -221,7 +95,7 @@
         <div class="infoBlock">
           <ul>
             <li>
-              Worked on a small team of two dedicated to developing chatbots on Google Dialogflow and Amazon Alexa in Node.js.
+
             </li>
             <li>
               Actively sought out work and often created new tickets based on what needed to be done.
