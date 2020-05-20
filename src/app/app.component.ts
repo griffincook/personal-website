@@ -73,18 +73,29 @@ export class AppComponent implements OnInit {
   }
 
   setInfoText() {
-    this.aboutInfo = [{
-      title: 'Who am I?',
-      bullets: [
-        'A student at the University of Waterloo currently working towards my Bachelor of Engineering in Systems Design Engineering.',
-        'Always looking for new experiences where I am able to learn new, relevant, and applicable skills.',
-        'Passionate about creativity, design, and building things.',
-        'Athletic and especially enjoy playing sports! I have played on many intramural teams at UW including hockey, soccer, indoor volleyball, beach volleyball, flag football and ultimate frisbee.',
-        'Love outdoor activities and think that there is nowhere better to be than on the water.',
-        'A self-taught guitar player and mostly play any songs that I\'m enjoying at the time.',
-        'Obsessed with listening to music and always trying to explore new genres, but my go to genres are rock, folk, and indie.'
-      ]
-    }
+    this.aboutInfo = [
+      {
+        title: 'I\'m...',
+        bullets: [
+          'A student at the University of Waterloo currently working towards my Bachelor of Engineering in Systems Design Engineering.',
+          'Passionate about creativity, design, and building things.',
+          'Always looking for new experiences to learn relevant, and applicable skills.',
+          'Athletic and especially enjoy playing sports. I have played on many intramural teams at UW including hockey, soccer, indoor volleyball, beach volleyball, flag football and ultimate frisbee.',
+          'An adventurous person and think that there is nowhere better to be than by the water.',
+          'A self-taught guitar player. I often attempt to play new songs after discovering new tunes.',
+          'Obsessed with listening to music and always trying to explore new genres, but my go to genres are rock, folk, and indie.',
+        ],
+        imageData: {
+          caption: 'Some snapshots of my life',
+          images: [
+            'assets/images/me_trunk.jpg',
+            'assets/images/group_hike.jpg',
+            'assets/images/class.jpeg'
+          ],
+          selected: 0,
+          horiz: false
+        }
+      }
     ];
     this.projectsInfo = [
       {
@@ -208,7 +219,15 @@ export class AppComponent implements OnInit {
           'Collaborated with a small team dedicated to developing chatbots on Google Dialogflow and Amazon Alexa with Node.js.',
           'Prototyped new capabilities for the chatbots, analyzed their alignment with the company\'s goals, and pitched them to the head of engineering.',
           'Introduced DevOps practices to repositories using Terraform for AWS, and Gitlab CI/CD, which reduced the stress of deployments for IT.'
-        ]
+        ],
+        imageData: {
+          caption: 'Last day with the other co-ops',
+          images: [
+            'assets/images/xe.jpg',
+          ],
+          selected: 0,
+          horiz: false
+        }
       },
       {
         title: 'Frontend Full Stack Developer, <a href="https://ssimwave.com" target="_blank">SSIMWAVE</a> [Sept - December, 2018]',
