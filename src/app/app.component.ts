@@ -64,7 +64,7 @@ export class AppComponent implements OnInit {
   };
 
   manageScrollBar() {
-    let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) * 1.17;
+    let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) * 1.05;
     if ($(document).scrollTop() >= h) {
       $('.sectionHeader').addClass('fixed');
     } else {
@@ -105,7 +105,9 @@ export class AppComponent implements OnInit {
             'assets/images/shottle1.jpg',
             'assets/images/shottle2.jpg',
             'assets/images/shottle3.jpg'
-          ]
+          ],
+          selected: 0,
+          horiz: false
         }
       },
       {
@@ -129,7 +131,9 @@ export class AppComponent implements OnInit {
           caption: 'Circuit that Displays Which Notes Need to be Played',
           images: [
             'assets/images/guitar_hero_notes.jpg'
-          ]
+          ],
+          selected: 0,
+          horiz: false
         }
       },
       {
@@ -146,7 +150,9 @@ export class AppComponent implements OnInit {
           caption: 'Start of the Game',
           images: [
             'assets/images/first_room_screenshot.PNG'
-          ]
+          ],
+          selected: 0,
+          horiz: true
         }
       },
       {
@@ -163,7 +169,9 @@ export class AppComponent implements OnInit {
           caption: 'Opening Scene with Instructions for the Player',
           images: [
             'assets/images/you_cant_hide.PNG'
-          ]
+          ],
+          selected: 0,
+          horiz: true
         }
       },
       {
@@ -178,7 +186,9 @@ export class AppComponent implements OnInit {
           images: [
             'assets/images/home_capture.PNG',
             'assets/images/admin_capture.PNG',
-          ]
+          ],
+          selected: 0,
+          horiz: true
         }
       }
     ];

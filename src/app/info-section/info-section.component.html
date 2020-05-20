@@ -7,12 +7,32 @@
       </li>
     </ul>
   </div>
-  <div *ngIf="infoObj.imageData">
+  <div *ngIf="infoObj.imageData" id="gallery-{{infoObj.imageData.images[0]}}">
+    <!-- Slideshow container -->
     <h5>{{infoObj.imageData.caption}}</h5>
-    <div class="row">
-      <div class="col" *ngFor="let imageSrc of infoObj.imageData.images">
-        <img [src]="imageSrc" class="vertImage">
+    <div class="slideshow-container" [ngClass]="{'horizImage': infoObj.imageData.horiz}">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides" *ngFor="let imageSrc of infoObj.imageData.images; let i = index"
+           [ngStyle]="{'display': infoObj.imageData.selected == i ? 'block' : 'none'}">
+          <div class="numbertext">{{i + 1}} / {{infoObj.imageData.images.length}}</div>
+          <img [src]="imageSrc" style="width:100%">
+      </div>
+
+      <!-- Next and previous buttons -->
+      <div *ngIf="infoObj.imageData.images.length > 1">
+        <a class="prev" (click)="plusSlides(infoObj, -1)">&#10094;</a>
+        <a class="next" (click)="plusSlides(infoObj,1)">&#10095;</a>
       </div>
     </div>
-  </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center" >
+      <span class="dot"
+            [ngClass]="{'active': infoObj.imageData.selected == i}"
+            *ngFor="let imageSrc of infoObj.imageData.images; let i = index"
+            (click)="currentSlide(infoObj, i)"
+      ></span>
+    </div>
 </div>
