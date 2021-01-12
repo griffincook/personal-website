@@ -2,8 +2,7 @@
   <h3 [innerHTML]="infoObj.title"></h3>
   <div class="infoBlock">
     <ul>
-      <li *ngFor="let bullet of infoObj.bullets">
-        {{ bullet }}
+      <li *ngFor="let bullet of infoObj.bullets" [innerHTML]="bullet">
       </li>
     </ul>
   </div>

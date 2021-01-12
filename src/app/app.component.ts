@@ -99,6 +99,25 @@ export class AppComponent implements OnInit {
     ];
     this.projectsInfo = [
       {
+        title: 'BitBeatz',
+        bullets: [
+          'I was part of a team tasked with creating a music application that allows users to collaborate over a network.',
+          'We followed Google Sprint methodology to analyze our problem space and get our initial ideas. Check out my <a href="assets/pdf/griffincook_individual_sprint_doc.pdf" target="_blank">post sprint analysis here</a>',
+          'My focus was on the user interface post Sprint. I learned Figma and then used it to design a lot of the user interface. Check out the <a href="https://www.figma.com/proto/W6R2ZgZv04BEALlMVwP6wJ/Prototype-screens?node-id=4%3A32&scaling=min-zoom" target="_blank">Figma design here</a>.',
+          'I then worked on developing the prototype in React. Our team went through many iterations of the design process, and conducted user testing with a variety of users. Improvements were always implemented in the React site. Check out the <a href="assets/pdf/design_loop_feedback_team.pdf" target="_blank">design loop feedback from one of our iterations here</a>.',
+          'All of our work was documented in this <a href="assets/pdf/EAL.pdf" target="_blank">Engineering Accountability Log</a>.',
+          'Check out the <a href="http://bitbeatz.ca" target="_blank">live site here</a>! Please note it is still a prototype and not fully functional. (It may take time to spin up the Heroku app, please try refreshing if it times out.)',
+        ],
+        imageData: {
+          caption: 'Screenshot of the final iteration of the prototype',
+          images: [
+            'assets/images/bitbeatz1.png'
+          ],
+          selected: 0,
+          horiz: false
+        }
+      },
+      {
         title: 'Shottle',
         bullets: [
           'A bottle that is meant to reduce alcohol consumption and increase water intake when drinking at social events.',
