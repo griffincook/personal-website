@@ -86,7 +86,7 @@ export class AppComponent implements OnInit {
           'Obsessed with listening to music and always trying to explore new genres, but my go to genres are rock, folk, and indie.',
         ],
         imageData: {
-          caption: 'Some snapshots of my life',
+          caption: 'Some snapshots from my life',
           images: [
             'assets/images/me_trunk.jpg',
             'assets/images/group_hike.jpg',
@@ -224,6 +224,15 @@ export class AppComponent implements OnInit {
       }
     ];
     this.workInfo = [
+      {
+        title: 'Web Developer, <a href="https://horizn.com/" target="_blank">Horizn</a> [Sept - Dec, 2020] ',
+        bullets: [
+          'Built components for a new customer facing site using PHP, Laravel, Javascript, React, HTML, and CSS. The project was driven by new UX requirements and accessibility improvements.',
+          'Wrote Laravel Artisan scripts for the largest database migration in Horizn\'s history, which involved moving and recreating over 400 online banking demos.',
+          'Refactored the migration logic to reduce redundancy.',
+          'Helped onboard the oncoming co-op students.'
+        ]
+      },
       {
         title: 'Web Application Developer, <a href="https://www.inflightintegration.com/" target="_blank">InFlight</a> [Jan - April, 2020] ',
         bullets: [

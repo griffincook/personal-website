@@ -67,6 +67,19 @@ h5 {
   -ms-user-select: none;
   user-select: none;
 }
+.sectionTitle {
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 500px) {
+  .sectionTitle {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
 .highlightText {
   text-decoration: underline;
 }
@@ -150,9 +163,19 @@ h5 {
 
 /* Slideshow container */
 .slideshow-container {
-  width: 50%;
+  width: 75%;
   position: relative;
   margin: auto;
+}
+@media only screen and (max-width: 500px) {
+  .slideshow-container {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .slideshow-container {
+    width: 50%;
+  }
 }
 
 /* Hide the images by default */
