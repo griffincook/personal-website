@@ -103,10 +103,11 @@ export class AppComponent implements OnInit {
         bullets: [
           'I was part of a team tasked with creating a music application that allows users to collaborate over a network.',
           'We followed Google Sprint methodology to analyze our problem space and get our initial ideas. Check out my <a href="assets/pdf/griffincook_individual_sprint_doc.pdf" target="_blank">post sprint analysis here</a>.',
-          'My focus was on the user interface post Sprint. I learned Figma and then used it to design a lot of the user interface. Check out the <a href="https://www.figma.com/proto/W6R2ZgZv04BEALlMVwP6wJ/Prototype-screens?node-id=4%3A32&scaling=min-zoom" target="_blank">Figma design here</a>.',
-          'I then worked on developing the prototype in React. Our team went through many iterations of the design process, and conducted user testing with a variety of users. Improvements were always implemented in the React site. Check out the <a href="assets/pdf/design_loop_feedback_team.pdf" target="_blank">design loop feedback from one of our iterations here</a>.',
+          'My focus was on the user interface post Sprint. Early on I learned Figma to progress our hand sketched designs to a wireframe prototpye. Check out the <a href="https://www.figma.com/proto/W6R2ZgZv04BEALlMVwP6wJ/Prototype-screens?node-id=4%3A32&scaling=min-zoom" target="_blank">Figma design here</a>.',
+          'The Figma prototype was used as a guideline for then building a prototpye in React. Our team went through many iterations of the design process, and conducted user testing with a variety of users. Improvements were always implemented in the React site. Check out the <a href="assets/pdf/design_loop_feedback_team.pdf" target="_blank">design loop feedback from one of our iterations here</a>.',
+          'Our code can be found on Github <a href="https://github.com/Bitbeatz/bitbeatz" target="_blank">github.com/Bitbeatz/bitbeatz</a>',
           'All of our work was documented in this <a href="assets/pdf/EAL.pdf" target="_blank">Engineering Accountability Log</a>.',
-          'Check out the <a href="http://bitbeatz.ca" target="_blank">live site here</a>! Please note it is still a prototype and not fully functional. (It may take time to spin up the Heroku app, please try refreshing if it times out.)',
+          'Check out <a href="http://bitbeatz.ca" target="_blank">bitbeatz.ca</a> to see it in action! (Please note it is still a prototype and not fully functional. The backend was never connected to the frontend as we utilized Wizard of Oz testing during our user testing sessions. It may take time to spin up the Heroku app, please try refreshing if it times out.)'
         ],
         imageData: {
           caption: 'Screenshot of the final iteration of the prototype',
